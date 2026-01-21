@@ -476,5 +476,33 @@ PANDA SECTION INDEX
 <!-- custom script -->
 <script src="../vendor/js/contact_us.js"></script>
 <script src="js/script.js"></script>
+
+        <!--
+          PANDA ELEMENT SELECTION SCRIPT
+          ===============================
+          Captures all element clicks inside the iframe and sends metadata to Bubble via postMessage.
+          Metadata captured: url, width, height, alt
+            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
+        -->
+        <script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-element-selection.js" defer></script>
+
+        <!--
+          PANDA BRANDING SCRIPT
+          ====================
+          Handles Panda-specific branding, logos, placeholders, and runtime injection for the iframe/editor.
+            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
+        -->
+        <script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-branding.js" defer></script>
+        <!--
+          PANDA AUTO RELOAD SCRIPT
+          ====================
+          Handles Panda HMR solution built on railway to hot reload changes in preview.
+            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
+        -->
+        <script>
+        const es = new EventSource("/__hmr");
+        es.onmessage = () => location.reload();
+        </script>
+
 </body>
 </html>
